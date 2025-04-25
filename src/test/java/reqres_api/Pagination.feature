@@ -1,6 +1,9 @@
 Feature: pagination works as expected on the users endpoint
 
 Background:
+  * def headers = call read('headers.js')
+  * configure headers = headers
+
   * url 'https://reqres.in/api'
   Given path 'users'
   When method get

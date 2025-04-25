@@ -1,5 +1,9 @@
 Feature: user account test
 
+Background:
+  * def headers = call read('headers.js')
+  * configure headers = headers
+
 Scenario: create user and login
   * def email = 'eve.holt@reqres.in'
   * def password = 'abcd1234!'

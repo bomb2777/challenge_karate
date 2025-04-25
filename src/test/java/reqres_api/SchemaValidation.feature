@@ -1,5 +1,9 @@
 Feature: schema validation test
 
+Background:
+  * def headers = call read('headers.js')
+  * configure headers = headers
+
 Scenario: response schema is correct
   * def expectedSchema =
   """
